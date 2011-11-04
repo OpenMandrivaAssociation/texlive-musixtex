@@ -1,5 +1,11 @@
+# revision 23303
+# category Package
+# catalog-ctan /macros/musixtex
+# catalog-date 2011-07-18 20:08:03 +0200
+# catalog-license gpl
+# catalog-version 1.15 (2011-07-18)
 Name:		texlive-musixtex
-Version:	1.15.20110718
+Version:	1.15 (2011-07-18)
 Release:	1
 Summary:	Sophisticated music typesetting
 Group:		Publishing
@@ -453,6 +459,7 @@ which takes much of the strain.
 %doc %{_texmfdistdir}/source/generic/musixtex/musixcrd/musixcrd.dtx
 %doc %{_texmfdistdir}/source/generic/musixtex/musixcrd/readme
 %doc %{_texmfdistdir}/source/generic/musixtex/musixcrd/strip.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -470,3 +477,5 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

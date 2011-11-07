@@ -5,7 +5,7 @@
 # catalog-license gpl
 # catalog-version 1.15 (2011-07-18)
 Name:		texlive-musixtex
-Version:	1.15 (2011-07-18)
+Version:	1.15
 Release:	1
 Summary:	Sophisticated music typesetting
 Group:		Publishing

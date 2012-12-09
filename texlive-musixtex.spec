@@ -237,3 +237,22 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.15-3
++ Revision: 754236
+- Rebuild to reduce used resources
+
+* Thu Nov 10 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.15-2
++ Revision: 729686
+- texlive-musixtex
+
+* Mon Nov 07 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.15-1
++ Revision: 727162
+- texlive-musixtex
+- texlive-musixtex
+- texlive-musixtex
+- texlive-musixtex
+- texlive-musixtex
+

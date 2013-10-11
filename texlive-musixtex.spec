@@ -1,12 +1,12 @@
-# revision 24518
+# revision 29752
 # category Package
 # catalog-ctan /macros/musixtex
-# catalog-date 2011-10-24 18:06:47 +0200
+# catalog-date 2013-01-26 20:44:01 +0100
 # catalog-license gpl
-# catalog-version 1.15 (2011-10-23)
+# catalog-version 1.15 (2013-01-21)
 Name:		texlive-musixtex
 Version:	1.15
-Release:	3
+Release:	4
 Summary:	Sophisticated music typesetting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/musixtex
@@ -48,8 +48,6 @@ MusixTeX macros..
 %{_bindir}/musixflx
 %{_bindir}/musixtex
 %{_texmfdistdir}/dvips/musixtex/psslurs.pro
-%{_texmfdistdir}/scripts/musixtex/Windows/musixflx.bat
-%{_texmfdistdir}/scripts/musixtex/Windows/musixtex.bat
 %{_texmfdistdir}/scripts/musixtex/musixflx.lua
 %{_texmfdistdir}/scripts/musixtex/musixtex.lua
 %{_texmfdistdir}/tex/generic/musixtex/musixadd.tex
@@ -94,11 +92,11 @@ MusixTeX macros..
 %{_texmfdistdir}/tex/latex/musixtex/musixcrd.sty
 %{_texmfdistdir}/tex/latex/musixtex/musixltx.tex
 %{_texmfdistdir}/tex/latex/musixtex/musixtex.sty
-%doc %{_texmfdistdir}/doc/generic/musixtex/ChangeLog
 %doc %{_texmfdistdir}/doc/generic/musixtex/ChangeLog-115.txt
 %doc %{_texmfdistdir}/doc/generic/musixtex/ChangeLog-T114.txt
 %doc %{_texmfdistdir}/doc/generic/musixtex/ChangeLog-musixdoc-115.txt
 %doc %{_texmfdistdir}/doc/generic/musixtex/README
+%doc %{_texmfdistdir}/doc/generic/musixtex/addons/README.underbracket
 %doc %{_texmfdistdir}/doc/generic/musixtex/addons/curly.tex
 %doc %{_texmfdistdir}/doc/generic/musixtex/addons/tuplet.tex
 %doc %{_texmfdistdir}/doc/generic/musixtex/addons/underbracket.sty
@@ -179,7 +177,6 @@ MusixTeX macros..
 %doc %{_texmfdistdir}/doc/generic/musixtex/examples/widor.tex
 %doc %{_texmfdistdir}/doc/generic/musixtex/examples/widor_16.tex
 %doc %{_texmfdistdir}/doc/generic/musixtex/examples/widor_20.tex
-%doc %{_texmfdistdir}/doc/generic/musixtex/gpl.txt
 %doc %{_texmfdistdir}/doc/generic/musixtex/musixcrd/README.musixcrd
 %doc %{_texmfdistdir}/doc/generic/musixtex/musixcrd/doc.pdf
 %doc %{_texmfdistdir}/doc/generic/musixtex/musixdoc.pdf
@@ -206,14 +203,12 @@ MusixTeX macros..
 %doc %{_texmfdistdir}/doc/generic/musixtex/psslurs/slurs.tex
 %doc %{_texmfdistdir}/doc/generic/musixtex/reference/musixre1.pdf
 %doc %{_texmfdistdir}/doc/generic/musixtex/reference/musixre1.tex
-%doc %{_texmfdistdir}/doc/generic/musixtex/scripts/musixflx.1
-%doc %{_texmfdistdir}/doc/generic/musixtex/scripts/musixflx.pdf
-%doc %{_texmfdistdir}/doc/generic/musixtex/scripts/musixtex.1
-%doc %{_texmfdistdir}/doc/generic/musixtex/scripts/musixtex.pdf
+%doc %{_texmfdistdir}/doc/generic/musixtex/scripts/musixflx.html
+%doc %{_texmfdistdir}/doc/generic/musixtex/scripts/musixtex.html
 %doc %{_mandir}/man1/musixflx.1*
-%doc %{_texmfdir}/doc/man/man1/musixflx.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/musixflx.man1.pdf
 %doc %{_mandir}/man1/musixtex.1*
-%doc %{_texmfdir}/doc/man/man1/musixtex.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/musixtex.man1.pdf
 #- source
 %doc %{_texmfdistdir}/source/generic/musixtex/musixcrd/doc.tex
 %doc %{_texmfdistdir}/source/generic/musixtex/musixcrd/makefile
@@ -234,25 +229,6 @@ pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdistdir}/scripts/musixtex/musixtex.lua musixtex
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.15-3
-+ Revision: 754236
-- Rebuild to reduce used resources
-
-* Thu Nov 10 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.15-2
-+ Revision: 729686
-- texlive-musixtex
-
-* Mon Nov 07 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.15-1
-+ Revision: 727162
-- texlive-musixtex
-- texlive-musixtex
-- texlive-musixtex
-- texlive-musixtex
-- texlive-musixtex
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1

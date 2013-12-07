@@ -6,7 +6,7 @@
 # catalog-version 1.15 (2013-01-21)
 Name:		texlive-musixtex
 Version:	1.15
-Release:	4
+Release:	5
 Summary:	Sophisticated music typesetting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/musixtex

@@ -1,12 +1,12 @@
-# revision 29752
+# revision 32402
 # category Package
 # catalog-ctan /macros/musixtex
-# catalog-date 2013-01-26 20:44:01 +0100
+# catalog-date 2013-12-13 00:08:29 +0100
 # catalog-license gpl
-# catalog-version 1.15 (2013-01-21)
+# catalog-version 1.15 (2013-12-12)
 Name:		texlive-musixtex
 Version:	1.15
-Release:	8
+Release:	9
 Summary:	Sophisticated music typesetting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/musixtex
@@ -119,7 +119,6 @@ MusixTeX macros..
 %doc %{_texmfdistdir}/doc/generic/musixtex/examples/aveverum.tex
 %doc %{_texmfdistdir}/doc/generic/musixtex/examples/changecontext.tex
 %doc %{_texmfdistdir}/doc/generic/musixtex/examples/chanson.tex
-%doc %{_texmfdistdir}/doc/generic/musixtex/examples/coulhack.tex
 %doc %{_texmfdistdir}/doc/generic/musixtex/examples/dissonan.tex
 %doc %{_texmfdistdir}/doc/generic/musixtex/examples/fantaisc.tex
 %doc %{_texmfdistdir}/doc/generic/musixtex/examples/fantaisd.tex

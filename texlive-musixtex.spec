@@ -1,5 +1,5 @@
 Name:		texlive-musixtex
-Version:	1.27
+Version:	1.28
 Release:	1
 Summary:	Sophisticated music typesetting
 Group:		Publishing

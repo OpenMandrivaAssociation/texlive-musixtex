@@ -1,6 +1,6 @@
 Name:		texlive-musixtex
 Version:	1.28
-Release:	1
+Release:	2
 Summary:	Sophisticated music typesetting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/musixtex

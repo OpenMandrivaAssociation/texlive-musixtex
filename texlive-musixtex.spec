@@ -1,13 +1,13 @@
 Name:		texlive-musixtex
-Version:	1.29
-Release:	2
+Version:	60382
+Release:	1
 Summary:	Sophisticated music typesetting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/musixtex
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/musixtex.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/musixtex.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/musixtex.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/musixtex.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/musixtex.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/musixtex.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +30,12 @@ the pmx preprocessor compiles a simpler input language to
 MusixTeX macros..
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -55,15 +55,16 @@ MusixTeX macros..
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/musixtex/musixflx.lua musixflx
-    ln -sf %{_texmfdistdir}/scripts/musixtex/musixtex.lua musixtex
+ln -sf %{_texmfdistdir}/scripts/musixtex/musixflx.lua musixflx
+ln -sf %{_texmfdistdir}/scripts/musixtex/musixtex.lua musixtex
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}

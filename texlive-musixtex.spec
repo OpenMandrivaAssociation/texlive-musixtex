@@ -1,5 +1,5 @@
 Name:		texlive-musixtex
-Version:	65519
+Version:	68484
 Release:	1
 Summary:	Sophisticated music typesetting
 Group:		Publishing

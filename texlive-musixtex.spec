@@ -3,7 +3,7 @@ Version:	70804
 Release:	1
 Summary:	Sophisticated music typesetting
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/musixtex
+URL:		https://www.ctan.org/tex-archive/macros/musixtex
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/musixtex.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/musixtex.doc.r%{version}.tar.xz

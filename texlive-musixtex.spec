@@ -1,5 +1,6 @@
 %global tl_name musixtex
 %global tl_revision 79618
+%global tl_bin_links musixflx:%{_texmfdistdir}/scripts/musixtex/musixflx.lua musixtex:%{_texmfdistdir}/scripts/musixtex/musixtex.lua
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -16,6 +17,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(musixtex.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 MusiXTeX provides a set of macros, based on the earlier MusicTeX, for
